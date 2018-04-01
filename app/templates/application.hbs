@@ -1,5 +1,74 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<div class="content">
 
+	<div class="container salary-block">
+		<div class="row">
+			<div class="col-sm">
+				<div class="salary">
+					<span class="label">ваша зарплата "Чистыми":</span>
+					{{input class="net" value=salaryNet key-up="netSalaryChanged" }}
+				</div>
+				<div class="salary">
+					<span class="label">ваша зарплата "Грязными":</span>
+					{{input class="gross" value=salaryGross key-up="grossSalaryChanged"}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container taxes-block">
+		<div class="row">
+			<div class="col-sm">
+				<div class="header">
+					<span class="label">Налоги за месяц</span>
+				</div>
+				<div class="tax">
+					<span class="label">Пенсионные отчисления {{fa-icon "info-circle"}}</span>
+					<span class="value">{{pensionTaxMonth}}</span>
+				</div>
+				<div class="tax">
+					<span class="label">Медицинское страхование {{fa-icon "info-circle"}}</span>
+					<span class="value">{{medicalTaxMonth}}</span>
+				</div>
+				<div class="tax">
+					<span class="label">Социальное страхование {{fa-icon "info-circle"}}</span>
+					<span class="value">{{socialTaxMonth}}</span>
+				</div>
+				<div class="tax">
+					<span class="label">НДФЛ {{fa-icon "info-circle"}}</span>
+					<span class="value">{{ndflTaxMonth}}</span>
+				</div>
+				<div class="tax total">
+					<span class="label">Всего:</span>
+					<span class="value">{{totalTaxesMonth}}</span>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="header">
+					<span class="label">Налоги за год</span>
+				</div>
+				<div class="tax">
+					<span class="label">Пенсионные отчисления {{fa-icon "info-circle"}}</span>
+					<span class="value">{{pensionTaxYear}}</span>
+				</div>
+				<div class="tax">
+					<span class="label">Медицинское страхование {{fa-icon "info-circle"}}</span>
+					<span class="value">{{medicalTaxYear}}</span>
+				</div>
+				<div class="tax">
+					<span class="label">Социальное страхование {{fa-icon "info-circle"}}</span>
+					<span class="value">{{socialTaxYear}}</span>
+				</div>
+				<div class="tax">
+					<span class="label">НДФЛ {{fa-icon "info-circle"}}</span>
+					<span class="value">{{ndflTaxYear}}</span>
+				</div>
+				<div class="tax total">
+					<span class="label">Всего:</span>
+					<span class="value">{{totalTaxesYear}}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
 {{outlet}}
