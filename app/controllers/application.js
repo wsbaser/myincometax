@@ -40,7 +40,7 @@ export default Controller.extend({
 			let salaryNet = this.get('salaryNet');
 			if(salaryNet.trim()==''){
 				this.set('salaryGross', '');
-			}else{
+			}else if(salaryNet>1000){
 				let salaryGross = salaryNet /0.87;
 				this.set('salaryGross', Math.floor(salaryGross));
 				this.calculateTaxes(salaryGross);
@@ -50,7 +50,7 @@ export default Controller.extend({
 			let salaryGross = this.get('salaryGross');
 			if(salaryGross.trim()==''){
 				this.set('salaryNet', '');
-			}else{
+			}else if(salaryGross>1000){
 				let salaryNet = salaryGross * 0.87;
 				this.set('salaryNet', Math.floor(salaryNet));
 				this.calculateTaxes(salaryGross);

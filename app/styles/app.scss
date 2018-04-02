@@ -4,13 +4,30 @@
 .content{
 	width: 700px;
 	color: #444;
-    margin: 100px auto 0;
+    margin: 0 auto;
     font-family: Roboto;
     font-size: 14px;
 }
 
+.header-block{
+	background-color: #E8F5FD;
+	padding: 10px;
+	box-shadow: 1px 1px 5px #ddd;
+	font-size: 24px;
+	text-align: center;
+}
+
+.salary-block{
+	margin-top: 80px; 
+}
+
 .salary{
 	margin: 10px;
+	opacity: 0.8;
+}
+
+.salary.active{
+	opacity: 1;
 }
 
 .salary .label{
@@ -35,7 +52,7 @@
 }
 
 .taxes-block{
-	margin-top: 100px;
+	margin-top: 80px;
 	padding-top: 10px;
 	box-shadow: 1px 1px 5px #bbb;
 }
@@ -54,6 +71,10 @@
 .tax.total{
 	border-top: 1px solid #eee;
 	padding-top: 10px; 
+}
+
+.tax.total .value{
+	font-weight: bold;
 }
 
 .tax .label{

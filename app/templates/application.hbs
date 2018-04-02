@@ -1,14 +1,18 @@
 <div class="content">
 
+	<div class="header-block">
+		Сколько денег я отдаю государству?
+	</div>
+
 	<div class="container salary-block">
 		<div class="row">
 			<div class="col-sm">
-				<div class="salary">
-					<span class="label">ваша зарплата "Чистыми":</span>
+				<div class="salary active">
+					<span class="label">моя зарплата "Чистыми":</span>
 					{{input class="net" value=salaryNet key-up="netSalaryChanged" }}
 				</div>
 				<div class="salary">
-					<span class="label">ваша зарплата "Грязными":</span>
+					<span class="label">моя зарплата "Грязными":</span>
 					{{input class="gross" value=salaryGross key-up="grossSalaryChanged"}}
 				</div>
 			</div>
