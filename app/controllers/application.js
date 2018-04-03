@@ -14,12 +14,13 @@ export default Controller.extend({
 		});
 	},
 	calculateTaxes(salaryGross){
+		salaryGross = parseInt(salaryGross);
 		let pensionTaxMonth = salaryGross * 0.22;
 		let medicalTaxMonth = salaryGross * 0.051;
 		let socialTaxMonth = salaryGross * 0.029;
 		let ndflTaxMonth = salaryGross * 0.13;
 		let totalTaxesMonth = pensionTaxMonth + medicalTaxMonth + socialTaxMonth + ndflTaxMonth;
-		
+
 		this.set('pensionTaxMonth', this.formatTaxString(pensionTaxMonth));
 		this.set('medicalTaxMonth', this.formatTaxString(medicalTaxMonth));
 		this.set('socialTaxMonth', this.formatTaxString(socialTaxMonth));
@@ -31,6 +32,9 @@ export default Controller.extend({
 		this.set('socialTaxYear', this.formatTaxString(socialTaxMonth*12));
 		this.set('ndflTaxYear', this.formatTaxString(ndflTaxMonth*12));
 		this.set('totalTaxesYear', this.formatTaxString(totalTaxesMonth*12));
+
+		let FOT = salaryGross + pensionTaxMonth + medicalTaxMonth + socialTaxMonth;
+		this.set('FOT', this.formatTaxString(FOT));
 	},
 	formatTaxString(value){
 		return Math.floor(value) + ' руб.';

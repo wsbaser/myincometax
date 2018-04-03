@@ -15,6 +15,7 @@
 	box-shadow: 1px 1px 5px #ddd;
 	font-size: 24px;
 	text-align: center;
+	margin-top: 10px;
 }
 
 .salary-block{
@@ -23,7 +24,6 @@
 
 .salary{
 	margin: 10px;
-	opacity: 0.8;
 }
 
 .salary.active{
@@ -34,8 +34,7 @@
 	display: inline-block;
 	width: 250px;
 	margin-right: 40px;
-	text-transform: uppercase;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 .salary input{
@@ -51,14 +50,29 @@
 	outline: none;
 }
 
+.fot-block{
+	font-size: 16px;
+	margin-top: 60px;
+	padding-left: 15px;
+}
+
+.fot-block .value{
+	margin-left: 3px;
+	font-weight: bold;
+	border-bottom: 1px solid #ddd;
+	min-width: 80px;
+	display: inline-block;
+}
+
 .taxes-block{
-	margin-top: 80px;
+	margin-top: 20px;
 	padding-top: 10px;
 	box-shadow: 1px 1px 5px #bbb;
 }
 
 .taxes-block .header{
 	border-bottom: 1px solid #eee;
+	border-right: 1px solid #eee;
 	font-size: 16px;
 	text-align: center;
 	background-color: #E8F5FD;
@@ -85,7 +99,7 @@
 	color: #777;
 }
 
-.tax .label>i{
+.label>i{
 	color: #4AB3F4;
 	cursor: pointer;
 }
