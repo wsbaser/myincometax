@@ -20,30 +20,30 @@
 			</div>
 		</div>
 	</div>
-	<div class="fot-block">
+	<div class="fot-block {{unless hasOutput 'inactive'}}">
 		<span class="label">Моя зарплата до вычета налогов (фонд оплаты труда): {{fa-icon "info-circle"}} </span>
 		<span class="value">&nbsp;{{FOT}}&nbsp;</span>
 	</div>
-	<div class="container taxes-block">
+	<div class="container taxes-block {{unless hasOutput 'inactive'}}">
 		<div class="row">
 			<div class="col-sm">
 				<div class="header">
 					<span class="label">Налоги за месяц</span>
 				</div>
 				<div class="tax">
-					<span class="label">Пенсионные отчисления: {{fa-icon "info-circle"}}</span>
+					<span class="label">Пенсионные отчисления: {{fa-icon "info-circle" title="22%"}}</span>
 					<span class="value">{{pensionTaxMonth}}</span>
 				</div>
 				<div class="tax">
-					<span class="label">Медицинское страхование: {{fa-icon "info-circle"}}</span>
+					<span class="label">Медицинское страхование: {{fa-icon "info-circle" title="5.1%"}}</span>
 					<span class="value">{{medicalTaxMonth}}</span>
 				</div>
 				<div class="tax">
-					<span class="label">Социальное страхование: {{fa-icon "info-circle"}}</span>
+					<span class="label">Социальное страхование: {{fa-icon "info-circle" title="2.9%"}}</span>
 					<span class="value">{{socialTaxMonth}}</span>
 				</div>
 				<div class="tax">
-					<span class="label">НДФЛ: {{fa-icon "info-circle"}}</span>
+					<span class="label">НДФЛ: {{fa-icon "info-circle" title="13%"}}</span>
 					<span class="value">{{ndflTaxMonth}}</span>
 				</div>
 				<div class="tax total">
@@ -56,19 +56,19 @@
 					<span class="label">Налоги за год</span>
 				</div>
 				<div class="tax">
-					<span class="label">Пенсионные отчисления: {{fa-icon "info-circle"}}</span>
+					<span class="label">Пенсионные отчисления: {{fa-icon "info-circle" title="22%"}}</span>
 					<span class="value">{{pensionTaxYear}}</span>
 				</div>
 				<div class="tax">
-					<span class="label">Медицинское страхование: {{fa-icon "info-circle"}}</span>
+					<span class="label">Медицинское страхование: {{fa-icon "info-circle" title="5.1%"}}</span>
 					<span class="value">{{medicalTaxYear}}</span>
 				</div>
 				<div class="tax">
-					<span class="label">Социальное страхование: {{fa-icon "info-circle"}}</span>
+					<span class="label">Социальное страхование: {{fa-icon "info-circle" title="2.9%"}}</span>
 					<span class="value">{{socialTaxYear}}</span>
 				</div>
 				<div class="tax">
-					<span class="label">НДФЛ: {{fa-icon "info-circle"}}</span>
+					<span class="label">НДФЛ: {{fa-icon "info-circle" title="13%"}}</span>
 					<span class="value">{{ndflTaxYear}}</span>
 				</div>
 				<div class="tax total">

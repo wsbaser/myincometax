@@ -55,26 +55,30 @@ export default Controller.extend({
 		return Math.floor(value) + ' руб.';
 	},
 	actions:{
-		netSalaryChanged(){
-			this.set('salaryGross', '');
-			this.clearOutput();
-
+		netSalaryChanged(){			
 			let salaryNet = this.get('salaryNet');
 			if(salaryNet>1000){
 				let salaryGross = salaryNet /0.87;
 				this.set('salaryGross', Math.floor(salaryGross));
 				this.calculateTaxes(salaryGross);
+				this.set('hasOutput', true);
+			}else{
+				this.set('salaryGross', '');
+				this.clearOutput();
+				this.set('hasOutput', false);
 			}
 		},
 		grossSalaryChanged(){
-			this.set('salaryNet', '');
-			this.clearOutput();
-
 			let salaryGross = this.get('salaryGross');
 			if(salaryGross>1000){
 				let salaryNet = salaryGross * 0.87;
 				this.set('salaryNet', Math.floor(salaryNet));
 				this.calculateTaxes(salaryGross);
+				this.set('hasOutput', true);
+			}else{
+				this.set('salaryNet', '');
+				this.clearOutput();
+				this.set('hasOutput', false);
 			}
 		},
 		filterInput(value, e){
