@@ -108,3 +108,30 @@
 	display: inline-block;
 	width: 100px;	
 }
+
+.taxes-info-block{
+	margin-top: 30px;
+}
+
+.tax-info{
+	padding: 10px 15px;
+	border-top: 1px solid #eee;
+}
+
+.tax-info .label{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.tax-info .calculation{
+	font-size: 13px;
+	color: #777;
+}
+
+.tax-info i{
+	font-size: 10px;
+}
+
+.tax-info a{
+	color: #4AB3F4;
+}

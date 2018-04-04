@@ -36,28 +36,50 @@ export default Controller.extend({
 		let FOT = salaryGross + pensionTaxMonth + medicalTaxMonth + socialTaxMonth;
 		this.set('FOT', this.formatTaxString(FOT));
 	},
+	clearOutput(){
+		this.set('pensionTaxMonth', '');
+		this.set('medicalTaxMonth', '');
+		this.set('socialTaxMonth', '');
+		this.set('ndflTaxMonth', '');
+		this.set('totalTaxesMonth', '');
+
+		this.set('pensionTaxYear', '');
+		this.set('medicalTaxYear', '');
+		this.set('socialTaxYear', '');
+		this.set('ndflTaxYear', '');
+		this.set('totalTaxesYear', '');
+
+		this.set('FOT', '');
+	},
 	formatTaxString(value){
 		return Math.floor(value) + ' руб.';
 	},
 	actions:{
 		netSalaryChanged(){
+			this.set('salaryGross', '');
+			this.clearOutput();
+
 			let salaryNet = this.get('salaryNet');
-			if(salaryNet.trim()==''){
-				this.set('salaryGross', '');
-			}else if(salaryNet>1000){
+			if(salaryNet>1000){
 				let salaryGross = salaryNet /0.87;
 				this.set('salaryGross', Math.floor(salaryGross));
 				this.calculateTaxes(salaryGross);
 			}
 		},
 		grossSalaryChanged(){
+			this.set('salaryNet', '');
+			this.clearOutput();
+
 			let salaryGross = this.get('salaryGross');
-			if(salaryGross.trim()==''){
-				this.set('salaryNet', '');
-			}else if(salaryGross>1000){
+			if(salaryGross>1000){
 				let salaryNet = salaryGross * 0.87;
 				this.set('salaryNet', Math.floor(salaryNet));
 				this.calculateTaxes(salaryGross);
+			}
+		},
+		filterInput(value, e){
+			if(e.key.length==1 && (!$.isNumeric(e.key) || value.length==6)){
+				e.preventDefault();
 			}
 		}
 	}
