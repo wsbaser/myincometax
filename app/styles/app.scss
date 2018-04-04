@@ -10,7 +10,8 @@
 }
 
 .header-block{
-	background-color: #E8F5FD;
+	background-color: rgba(74, 179, 244,0.6);
+	color: #fff;
 	padding: 10px;
 	box-shadow: 1px 1px 5px #ddd;
 	font-size: 24px;
@@ -33,7 +34,6 @@
 .salary .label{
 	display: inline-block;
 	width: 250px;
-	margin-right: 40px;
 	font-size: 20px;
 }
 
@@ -75,7 +75,8 @@
 	border-right: 1px solid #eee;
 	font-size: 16px;
 	text-align: center;
-	background-color: #E8F5FD;
+	background-color: rgba(74, 179, 244,0.6);
+	color: #fff;
 }
 
 .tax{
@@ -96,7 +97,7 @@
 	width: 215px;
 	text-align: right;
 	padding-right: 10px;
-	color: #777;
+	color: #8899A6;
 }
 
 .label>i{
@@ -125,7 +126,7 @@
 
 .tax-info .calculation{
 	font-size: 13px;
-	color: #777;
+	color: #8899A6;
 }
 
 .tax-info i{
