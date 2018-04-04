@@ -10,7 +10,7 @@
 }
 
 .header-block{
-	background-color: rgba(74, 179, 244,0.6);
+	background-color: rgba(74, 179, 244,0.66);
 	color: #fff;
 	padding: 10px;
 	box-shadow: 1px 1px 5px #ddd;
@@ -33,7 +33,7 @@
 
 .salary .label{
 	display: inline-block;
-	width: 250px;
+	width: 230px;
 	font-size: 20px;
 }
 
@@ -43,6 +43,7 @@
 	border: 0;
 	border-bottom: 1px solid #eee;
 	box-shadow: 1px 1px 5px #ddd;
+	margin-left: 20px;
 	padding: 0 5px; 
 }
 
@@ -75,7 +76,7 @@
 	border-right: 1px solid #eee;
 	font-size: 16px;
 	text-align: center;
-	background-color: rgba(74, 179, 244,0.6);
+	background-color: rgba(74, 179, 244,0.66);
 	color: #fff;
 }
 
