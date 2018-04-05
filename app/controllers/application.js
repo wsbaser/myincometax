@@ -85,6 +85,16 @@ export default Controller.extend({
 			if(e.key.length==1 && (!$.isNumeric(e.key) || value.length==6)){
 				e.preventDefault();
 			}
+		},
+		showInfoBlock(infoBlockId){
+			let $infoblock = $("#"+infoBlockId);
+			$('html, body').animate({
+		        scrollTop: $infoblock.offset().top
+		    }, 500, 'linear');
+		    $infoblock.addClass('highlight');
+		    setTimeout(function(){
+		    	$infoblock.removeClass('highlight');
+		    }, 1800);
 		}
 	}
 });

@@ -21,7 +21,7 @@
 		</div>
 	</div>
 	<div class="fot-block {{unless hasOutput 'inactive'}}">
-		<span class="label">Моя зарплата до вычета налогов (фонд оплаты труда): {{fa-icon "info-circle"}} </span>
+		<span class="label">Моя зарплата до вычета налогов (фонд оплаты труда): {{fa-icon "info-circle" click=(action "showInfoBlock" "fot")}} </span>
 		<span class="value">&nbsp;{{FOT}}&nbsp;</span>
 	</div>
 	<div class="container taxes-block {{unless hasOutput 'inactive'}}">
@@ -31,19 +31,19 @@
 					<span class="label">Налоги за месяц</span>
 				</div>
 				<div class="tax">
-					<span class="label">Пенсионные отчисления: {{fa-icon "info-circle" title="22%"}}</span>
+					<span class="label">Пенсионные отчисления: {{fa-icon "info-circle" title="22%" click=(action "showInfoBlock" "pensiontax")}}</span>
 					<span class="value">{{pensionTaxMonth}}</span>
 				</div>
 				<div class="tax">
-					<span class="label">Медицинское страхование: {{fa-icon "info-circle" title="5.1%"}}</span>
+					<span class="label">Медицинское страхование: {{fa-icon "info-circle" title="5.1%" click=(action "showInfoBlock" "medicaltax")}}</span>
 					<span class="value">{{medicalTaxMonth}}</span>
 				</div>
 				<div class="tax">
-					<span class="label">Социальное страхование: {{fa-icon "info-circle" title="2.9%"}}</span>
+					<span class="label">Социальное страхование: {{fa-icon "info-circle" title="2.9%" click=(action "showInfoBlock" "socialtax")}}</span>
 					<span class="value">{{socialTaxMonth}}</span>
 				</div>
 				<div class="tax">
-					<span class="label">НДФЛ: {{fa-icon "info-circle" title="13%"}}</span>
+					<span class="label">НДФЛ: {{fa-icon "info-circle" title="13%" click=(action "showInfoBlock" "ndfltax")}}</span>
 					<span class="value">{{ndflTaxMonth}}</span>
 				</div>
 				<div class="tax total">
@@ -56,19 +56,19 @@
 					<span class="label">Налоги за год</span>
 				</div>
 				<div class="tax">
-					<span class="label">Пенсионные отчисления: {{fa-icon "info-circle" title="22%"}}</span>
+					<span class="label">Пенсионные отчисления: {{fa-icon "info-circle" title="22%" click=(action "showInfoBlock" "pensiontax")}}</span>
 					<span class="value">{{pensionTaxYear}}</span>
 				</div>
 				<div class="tax">
-					<span class="label">Медицинское страхование: {{fa-icon "info-circle" title="5.1%"}}</span>
+					<span class="label">Медицинское страхование: {{fa-icon "info-circle" title="5.1%" click=(action "showInfoBlock" "medicaltax")}}</span>
 					<span class="value">{{medicalTaxYear}}</span>
 				</div>
 				<div class="tax">
-					<span class="label">Социальное страхование: {{fa-icon "info-circle" title="2.9%"}}</span>
+					<span class="label">Социальное страхование: {{fa-icon "info-circle" title="2.9%" click=(action "showInfoBlock" "socialtax")}}</span>
 					<span class="value">{{socialTaxYear}}</span>
 				</div>
 				<div class="tax">
-					<span class="label">НДФЛ: {{fa-icon "info-circle" title="13%"}}</span>
+					<span class="label">НДФЛ: {{fa-icon "info-circle" title="13%" click=(action "showInfoBlock" "ndfltax")}}</span>
 					<span class="value">{{ndflTaxYear}}</span>
 				</div>
 				<div class="tax total">
@@ -95,7 +95,7 @@
 				<br>
 				Расходуется на выплаты тем, кто уже вышел на пенсию. Накопления пенсионных отчислений не происходит.
 				Суммарный объем расходов Пенсионного фонда составляет более 7 трлн. рублей в год.
-				Дефицит фонда финансируется из Федерального бюджета и Фонда национального благосостояния.
+				Дефицит финансируется из Федерального бюджета и Фонда национального благосостояния.
 			</div>
 		</div>
 		<div id="medicaltax" class="tax-info">
