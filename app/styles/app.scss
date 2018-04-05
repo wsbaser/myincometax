@@ -135,13 +135,20 @@
 	font-weight: bold;
 }
 
+.tax-info .body a i{
+	font-size: 10px;
+	color: #555;
+}
+
 .tax-info .calculation{
 	font-size: 13px;
 	color: #8899A6;
 }
 
-.tax-info i{
+.tax-info .calculation i{
 	font-size: 10px;
+	vertical-align: top;
+	margin-top: 4px;
 }
 
 .tax-info a{
@@ -158,5 +165,5 @@
 }
 
 .highlight {
-  animation: highlight 1800ms;
+  animation: highlight 1500ms;
 }

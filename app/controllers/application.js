@@ -94,7 +94,7 @@ export default Controller.extend({
 		    $infoblock.addClass('highlight');
 		    setTimeout(function(){
 		    	$infoblock.removeClass('highlight');
-		    }, 1800);
+		    }, 1500);
 		}
 	}
 });
