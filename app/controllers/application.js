@@ -3,6 +3,7 @@ import Controller from '@ember/controller';
 export default Controller.extend({
 	salaryNet: "",
 	salaryGross: "",
+	collapsed: true,
 	onSalaryChange: Ember.observer('salaryNet', function(){
 		let salaryNet = this.get('salaryNet');
 
@@ -95,6 +96,14 @@ export default Controller.extend({
 		    setTimeout(function(){
 		    	$infoblock.removeClass('highlight');
 		    }, 1500);
+		},
+		toggle(){
+			this.set('collapsed', false);
+			this.set('notCollapsed', true);
+			let $infoblock = $(".more-info-block");
+			$('html, body').animate({
+		        scrollTop: $infoblock.offset().top
+		    }, 500, 'linear');
 		}
 	}
 });
