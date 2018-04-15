@@ -9,12 +9,12 @@
 			<div class="col-sm">
 				<div class="salary active">
 					<span class="label">Моя зарплата "чистыми"</span>
-					{{input class="net" value=salaryNet key-up="netSalaryChanged" key-down="filterInput"}}
+					{{input type="number" min="0" max="999999" class="net" value=salaryNet key-up="netSalaryChanged" key-down="filterInput"}}
 					{{fa-icon "ruble-sign"}}
 				</div>
 				<div class="salary">
 					<span class="label">Моя зарплата "грязными"</span>
-					{{input class="gross" value=salaryGross key-up="grossSalaryChanged" key-down="filterInput"}}
+					{{input type="number" min="0" max="999999" class="gross" value=salaryGross key-up="grossSalaryChanged" key-down="filterInput"}}
 					{{fa-icon "ruble-sign"}}
 				</div>
 			</div>

@@ -5,6 +5,13 @@ $text-light-color: #555;
 $links-color: #4AB3F4;
 $grey-color: #8899A6;
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
 .content{
 	color: $text-light-color;
     margin: 0 auto;
