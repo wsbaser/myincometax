@@ -89,8 +89,11 @@ export default Controller.extend({
 		},
 		showInfoBlock(infoBlockId){
 			let $infoblock = $("#"+infoBlockId);
+			const elementRect = $("#"+infoBlockId)[0].getBoundingClientRect();
+			const absoluteElementTop = elementRect.top + window.pageYOffset;
+			const middle = absoluteElementTop - (window.innerHeight / 2);
 			$('html, body').animate({
-		        scrollTop: $infoblock.offset().top
+		        scrollTop: middle
 		    }, 500, 'linear');
 		    $infoblock.addClass('highlight');
 		    setTimeout(function(){

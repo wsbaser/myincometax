@@ -80,7 +80,7 @@
 	</div>
 	<div class="taxes-info-block">
 		<div id="fot" class="tax-info">
-			<span class="label">Фонд оплаты труда</span>
+			<span class="label">Фонд оплаты труда (ФОТ)</span>
 			<div class="calculation">{{fa-icon "calculator"}} Зарплата "чистыми" + НДФЛ + Пенсионные отчисления + Медицинское страхование + Социальное страхование</div>
 			<div class="body">
 				Сумма, которую компания тратит на выплату зарплаты одному сотруднику. Другими словами, это сумма выдаываемая на руки + налоги, выплачиваемые компанией государству.
@@ -88,7 +88,12 @@
 		</div>
 		<div id="pensiontax" class="tax-info">
 			<span class="label">Пенсионные отчисления: 22%</span>
-			<div class="calculation">{{fa-icon "calculator"}} Зарплата "грязными" * 0.22</div>
+			<div class="calculation">{{fa-icon "calculator"}}
+				Зарплата "грязными" * 0.22
+				{{#if pensionTaxMonth}}
+					= {{pensionTaxMonth}} в месяц / {{pensionTaxYear}} в год
+				{{/if}}
+			</div>
 			<div class="body">
 				Собранные средства направляются в
 				<a target="_blank" href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D0%BD%D1%81%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9_%D1%84%D0%BE%D0%BD%D0%B4_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8">Пенсионный фонд Российской Федерации (ПФР) {{fa-icon "wikipedia-w"}}</a>.
@@ -99,8 +104,15 @@
 			</div>
 		</div>
 		<div id="medicaltax" class="tax-info">
-			<span class="label">Медицинское страхование: 5.1%</span>
-			<div class="calculation">{{fa-icon "calculator"}} Зарплата "грязными" * 0.051</div>
+			<span class="label">
+				Медицинское страхование: 5.1%
+			</span>
+			<div class="calculation">{{fa-icon "calculator"}}
+				Зарплата "грязными" * 0.051
+				{{#if medicalTaxMonth}}
+					= {{medicalTaxMonth}} в месяц / {{medicalTaxYear}} в год
+				{{/if}}
+			</div>
 			<div class="body">
 				Собранные средства направляются в <a target="_blank" href="https://ru.wikipedia.org/wiki/%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%84%D0%BE%D0%BD%D0%B4_%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F">Фонд обязательного медицинского страхования (ФОМС) {{fa-icon "wikipedia-w"}}</a>.
 				<br>
@@ -109,7 +121,12 @@
 		</div>
 		<div id="socialtax" class="tax-info">
 			<span class="label">Социальное страхование: 2.9%</span>
-			<div class="calculation">{{fa-icon "calculator"}} Зарплата "грязными" * 0.029</div>
+			<div class="calculation">{{fa-icon "calculator"}}
+				Зарплата "грязными" * 0.029
+				{{#if socialTaxMonth}}
+					= {{socialTaxMonth}} в месяц / {{socialTaxYear}} в год
+				{{/if}}
+			</div>
 			<div class="body">
 				Собранные средства направляются в <a target="_blank" href="https://ru.wikipedia.org/wiki/%D0%A4%D0%BE%D0%BD%D0%B4_%D1%81%D0%BE%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8">Фонд социального страхования Российской Федерации {{fa-icon "wikipedia-w"}}</a>,
 				<br>
@@ -118,7 +135,12 @@
 		</div>
 		<div id="ndfltax" class="tax-info">
 			<span class="label">НДФЛ: 13%</span>
-			<div class="calculation">{{fa-icon "calculator"}} Зарплата "грязными" * 0.13</div>
+			<div class="calculation">{{fa-icon "calculator"}}
+				Зарплата "грязными" * 0.13
+				{{#if ndflTaxMonth}}
+					= {{ndflTaxMonth}} в месяц / {{ndflTaxYear}} в год
+				{{/if}}
+			</div>
 			<div class="body">
 				Собранные средства распределяются между федеральным бюджетом, региональным бюджетом и муниципальным бюджетом.
 			</div>
