@@ -94,7 +94,7 @@ export default Controller.extend({
 			const middle = absoluteElementTop - (window.innerHeight / 2);
 			$('html, body').animate({
 		        scrollTop: middle
-		    }, 500, 'linear');
+		    }, 250, 'linear');
 		    $infoblock.addClass('highlight');
 		    setTimeout(function(){
 		    	$infoblock.removeClass('highlight');
